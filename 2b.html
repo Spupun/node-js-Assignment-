@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>2b</title>
+	</head>
+
+	<body>
+		<script>
+		function myFunction(one)
+		{
+			var a = one;
+			var len = a.length;
+			if(len < 8 || len > 12)
+			{
+				alert("Password should contain minimum 8 characters and maximum 12 characters");
+				return false;
+			}
+		}
+		</script>
+		
+		<div class="split left" style="float:left">
+			<form action="http://localhost:3000/get_data" onsubmit="return myFunction(pwd.value)" method="post">
+
+
+                Company ID:&nbsp;&nbsp;&nbsp;&nbsp;
+				<select name="companyid">
+					<option value="PRAD01_DEM">PRAD01_DEM</option>
+					<option value="PRAD02_DEM">PRAD02_DEM</option>
+					<option value="PRAD03_DEM">PRAD03_DEM</option>
+				</select>
+				<br><br>
+				first_name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="text" name="first_name" value="Mohan">
+				<br><br>
+				last_name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="text" name="last_name" id="last_name" value="Subudhi">
+				<br><br><br>
+
+				<button type="submit">Login</button>
+
+			</form>
+		</div>
+
+	</body>
+</html>
+
+
+

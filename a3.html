@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Page Title</title>
+<style>
+body{
+text-align: center;
+background-size: auto auto;
+}
+</style>
+</head>
+<body>
+<script>
+function myFunction(){
+var fName=document.getElementById("fn").value;
+var lName=document.getElementById("ln").value;
+var gender=document.getElementsByName("gen");
+var age=document.getElementById("age").value;
+for(i = 0; i < gender.length; i++) {
+if(gender[i].checked)
+var gen=gender[i].value;
+}
+if(fName == "" || lName == ""){
+alert("Empty values are not permitted");
+}else{
+document.write(fName+lName+"<br>");
+document.write(gen+"<br>");
+document.write(age);
+}
+}
+</script>
+<form id="demo">
+Firstname:<br>
+<input id='fn' type="text" name="firstname" >
+<br> Lastname:<br>
+<input id='ln' type="text" name="lastname">
+<br>Gender : <br>
+<input type="radio" name="gen" value="Male">Male<br>
+<input type="radio" name="gen" value="Female">Female<br>
+Age : <select id="age">
+<script>
+var opt="";
+for(var i=18;i<=65;i++)
+{
+opt += "<option>"+i+"</option>";
+}
+document.getElementById("age").innerHTML=opt;
+</script>
+</select>
+<br>
+<input type="button" onclick="myFunction()" value="submit">
+</form>
+</body>
+</html>

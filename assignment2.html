@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <p id="demo">ToDay's date </p>
+    <button type="button" onclick="getDate()">Show Date</button>
+    <script>
+        function getDate(){
+            var getP=document.getElementById("demo").innerHTML;
+            console.log(getP);
+            var date=new Date();
+            
+            var day=date.getDate();
+            var month=date.getMonth()+1;
+            var year=date.getFullYear();
+            
+            var dateIs=month+"/"+day+"/"+year;
+            
+
+            console.log(dateIs);
+            document.getElementById("demo").innerHTML=getP+" is = "+dateIs;
+        }
+    </script>
+</body>
+</html>

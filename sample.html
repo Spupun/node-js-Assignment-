@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>sample</title>
+	</head>
+	<body>
+		<script>
+            function myFunction()
+            {
+                let a="http://localhost:3000/get_data"
+                fetch(a, {
+                    method : 'POST',
+                    headers: { 
+                        'Content-type': 'application/json; charset=UTF-8'
+                    },
+                    body: JSON.stringify( {"first_name":"csvve","last_name":"vdsdsbdsb"} )
+                })
+                .then( response => response.json() )
+                .then(data => console.log(data))
+                .catch( error => console.log(error) )
+            }
+		</script>
+		<div>
+            <button onclick=myFunction()>Click</button>
+		</div>
+	</body>
+</html>
+

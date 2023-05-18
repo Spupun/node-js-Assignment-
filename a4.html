@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style>
+Body {
+font-family: Calibri, Helvetica, sans-serif; background-color: pink;
+}
+#btn {
+background-color: cadetblue; width: 100%;
+color: green; padding: 15px; margin: 10px 0px; border: none; cursor: pointer;
+}
+form {
+border: 3px solid #f1f1f1;
+}
+input[type=text], input[type=password] { width: 100%;
+margin: 8px 0; padding: 12px 20px; display: inline-block;
+border: 2px solid green; box-sizing: border-box;
+}
+#btn:hover {
+opacity: 0.7;
+}
+
+
+.container {
+padding: 25px;
+background-color: lightblue;
+}
+
+</style>
+</head>
+<body>
+
+<center> <h1> User Login</h1> </center>
+<form>
+<div class="container">
+<form action=""><br>
+name : <input type="text" id="username" onchange="validuname()"><br><br>
+password : <input type="password" id="password" onchange="validpassword()"><br><br>
+<button type="button" onclick="login()" id="btn">login</button>
+</form>
+</div>
+</form>
+
+
+<script>
+ 
+function validuname(){
+var uname=document.getElementById("username").value; if(uname == ""){
+alert("please insert username");
+}
+}
+function validpassword(){
+var password=document.getElementById("password").value; if(password == ""){
+alert("please insert password");
+}
+}
+function login(){
+var uname=document.getElementById("username").value; var password=document.getElementById("password").value; if(uname == ""){
+alert("please insert username");
+}
+if(password == ""){
+alert("please insert password");
+}
+if(uname == "Shatabdi" && password == "1234"){ alert("Sucessfully Logged in"); window.location.href="./a5.html"
+}
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>3b</title>
+</head>
+
+<body>
+<script>
+function myFunction(one)
+{
+var a = one;
+var len = a.length; if(len < 8 || len > 12)
+{
+alert("Password should contain minimum 8 characters and maximum 12 characters"); return false;
+}
+}
+</script>
+<div class="split left" style="float:left">
+
+<img src="https://plsadaptive.s3.amazonaws.com/eco/images/partners/P2GSr1fuLReHOJwBDq3V14hiwycTsJXV0KuXAMgK.png" alt="No image" height="100" width="350" style="float: left">
+
+<form action="http://localhost:3000/login" onsubmit="return myFunction(pwd.value)" method="post">
+
+<br><br><br><br><br><br><br><br>Company ID:&nbsp;&nbsp;&nbsp;&nbsp;
+<select name="companyid">
+<option value="PRAD01_DEM">PRAD01_DEM</option>
+<option value="PRAD02_DEM">PRAD02_DEM</option>
+<option value="PRAD03_DEM">PRAD03_DEM</option>
+</select>
+<br><br>
+User ID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" name="userid">
+<br><br> Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="password" name="pwd" id="pwd1">
+<br><br><br>
+
+<button type="submit">Login</button>
+
+</form>
+</div>
+
+</body>
+</html>
+
+
+

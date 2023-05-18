@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<center><body bgcolor="gray">
+    <h1 id="printText">welcome </h1>
+    <form action="">
+        Fname : <input type="text" id="fname"><br>
+        Lname : <input type="text" id="lname"><br>
+        Gender : <input type="radio" id="gender" name="gender" value="Male">Male
+                 <input type="radio" id="gender" name="gender" value="Female">Female
+                 <br>
+        Age : <select name="age" id="age">
+              </select><br>
+        <button type="button" onclick="getAndPrint()">submit</button>
+    </form>
+    
+    <script>
+        function selectAge(){
+            
+            let option='';
+            for(let i=18;i<=65;i++){
+                option=option+'<option value="'+i+'">'+i+'</option>';
+            }
+//            console.log(option);
+            document.getElementById("age").innerHTML=option;
+        }
+        selectAge();
+        
+        
+        function getAndPrint(){
+            var fname=document.getElementById("fname").value;
+            var lname=document.getElementById("lname").value;
+            var gender=document.getElementById("gender").value;
+            var age=document.getElementById("age").value;
+            
+            var print=fname+" "+lname+" Your gender is "+gender+" and your age is ="+age;
+            document.getElementById("printText").innerHTML=print;
+        }
+    </script>
+    </center>
+</body>
+
+</html>

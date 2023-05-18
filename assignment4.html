@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head><center>
+<body bgcolor="yellow">
+    <form action=""><br>
+        name : <input type="text" id="uname" onchange="validuname()"><br><br>
+        password : <input type="password" id="pass" onchange="validpassword()"><br><br>
+        <button type="button" onclick="login()">login</button>
+    </form>
+    <script>
+        function validuname(){
+            var uname=document.getElementById("uname").value;
+            if(uname == ""){
+                alert("please insert uname");
+            }
+        }
+        function validpassword(){
+            var password=document.getElementById("pass").value;
+            if(password == ""){
+                alert("please insert password");
+            }
+        }
+        function login(){
+            var uname=document.getElementById("uname").value;
+            var password=document.getElementById("pass").value;
+            if(uname == ""){
+                alert("please insert uname");
+            }
+            if(password == ""){
+                alert("please insert password");
+            }
+            if(uname == "mohan" && password == "subudhi"){
+                alert("login success");
+                window.location.href="./assignment4.1.html"
+            }
+            else{
+                alert("Incorrect Login Credentials");
+            }
+            
+        }
+    </script>
+</body>
+</center>
+</html>
